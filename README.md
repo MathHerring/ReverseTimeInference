@@ -27,7 +27,7 @@ Langevin simulation and corresponding data:
 Cytokinesis simulation and corresponding data:
 - /generateCytokinEnsemble/
 
-To generate trajectories compile the C++ code on your own machine (make clean, make) and then execute via python script.
+To generate trajectories execute the already compiled c code via python script. In case the program does not run on your machine, you have to compile yourself (make clean, make) and then execute via the python script.
 
 
 ## Acknowledgements

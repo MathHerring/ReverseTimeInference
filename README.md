@@ -16,10 +16,13 @@ optional:
 
 Inference explained in:
 -  TSAInferenceExampleForCytokinesis.ipynb
+
 Path Inference Vs Ensemble Inference:
 - TSAEnsembleVsPathInference.ipynb
+
 Langevin simulation and corresponding data:
 - /generatePowerlawEnsemble/
+
 Cytokinesis simulation and corresponding data:
 - /generateCytokinEnsemble/
 

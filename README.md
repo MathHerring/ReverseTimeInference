@@ -11,6 +11,7 @@ python prerequisites:
 - scipy
 - matplotlib
 - dynesty
+
 optional:
 - seaborn
 

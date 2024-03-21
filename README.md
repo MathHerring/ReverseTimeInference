@@ -31,4 +31,4 @@ To generate trajectories compile the C++ code on your own machine (make clean, m
 
 
 ## Acknowledgements
-For inference we used dynesty: https://github.com/joshspeagle/dynesty
+For nested sampling inference we used dynesty: https://github.com/joshspeagle/dynesty

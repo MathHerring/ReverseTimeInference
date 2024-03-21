@@ -12,14 +12,16 @@ Contents of this repository:
 
 ## Getting started
 
-prerequisites:
+python prerequisites:
 - numpy
 - scipy
 - matplotlib
 - dynesty
-
 optional:
 - seaborn
+
+tutorial in:
+TSAInferenceExampleForCytokinesis.ipynb 
 
 
 ## Acknowledgements

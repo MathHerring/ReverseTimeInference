@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Aug  5 15:23:11 2016
 
-@author: nicolas
-"""
 from __future__ import division
 import numpy as np
 import pylab as plt
@@ -13,10 +9,6 @@ import scipy.special as sp
 
 import sys
 import pickle
-
-import seaborn as sns
-sns.set(font_scale=2)#3)
-sns.set_style("white")
 
 
 class PureDriftAndDiffusion(object):
@@ -35,34 +27,34 @@ class PureDriftAndDiffusion(object):
         self.Tabsorb = 0
         self.x_upper_bound = 1700
         self.TminLength = 0
-        self.deltaTswitch = 5#10#0#1#         100#1#300#240
-        self.varDeltaTswitch =0#         20# 1#100
+        self.deltaTswitch = 5
+        self.varDeltaTswitch =0
         self.maxDeltaTswitch = self.deltaTswitch
-        self.Tswitch = 400#30#30#        600
+        self.Tswitch = 400
         self.x0_for_reverse = 0       
         self.max_rtime = fit_until_this_t        
-        self.traFreq =10#   200#800#2*10*200#200
+        self.traFreq =10
         # wfreq only for cov
-        self.wfreq =200#     200#800#2*10*200#5
-        self.total_time = 4000#1000#100#
+        self.wfreq =200
+        self.total_time = 4000
         
-        self.dt = 0.05#0.01
+        self.dt = 0.05
         
-        self.D1 = 0.04#1/2*2*1/2*0.05#0.1#0.05
-        self.D2 = 0.04#1/2*2*1/2*0.05#0.1#0.05        
+        self.D1 = 0.04
+        self.D2 = 0.04      
         self.D = self.D2
 
         self.Nb = 40
-        self.A = 0.12e-3 #1.2e-3
+        self.A = 0.12e-3 
         self.r0 = 14.5
    
         self.K = 10
         self.xi = 3.75e-4        
         
-        self.gamma1pre = 2*self.K*self.xi*10#20
-        self.gamma1 = 0#gamma1pre/10#0#gamma1pre*0.1*0.1#     #K*xi#0
-        self.gamma2pre = 20*2*np.pi*self.A*self.xi*self.Nb #0.00001 
-        self.gamma2 = 20*2*np.pi*self.A*self.xi*self.Nb #0.00001
+        self.gamma1pre = 2*self.K*self.xi*10
+        self.gamma1 = 0
+        self.gamma2pre = 20*2*np.pi*self.A*self.xi*self.Nb 
+        self.gamma2 = 20*2*np.pi*self.A*self.xi*self.Nb 
         
         ### paper prameters ####
         """

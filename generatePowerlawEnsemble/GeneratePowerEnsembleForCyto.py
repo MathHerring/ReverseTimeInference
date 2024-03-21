@@ -1,10 +1,5 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Aug 17 16:00:12 2019
-
-@author: nicolas
-"""
 
 
 from __future__ import absolute_import, unicode_literals,division#, print_function
@@ -13,64 +8,10 @@ import scipy as sp
 
 import os
 
-import matplotlib.pyplot as plt
-from matplotlib import ticker
-###############################################################################
-
-def mean_tsa_sn_mult(t,gam,d,alpha,beta):
-    if alpha <0:
-        frac1 = (t*(1 - alpha)*gam)**(1/(1 - alpha))
-        nom2 = d*(7*alpha**2 + 2*beta*(1 + beta) - alpha*(3 + 8*beta))*(-t*(-1 + alpha)*gam)**((alpha - beta)/(-1 + alpha))
-        denom2 = 2*(2*alpha - beta)*(-1 + 3*alpha - beta)*gam
-        frac2 = nom2/denom2
-        out = frac1 + frac2
-    else:
-        out = np.ones(len(t))*np.nan
-
-    return out
-    
-
-def var_tsa_sn_mult(t,gam,d,alpha,beta):
-    if alpha < 0:
-        out = d*(t*(-1 + alpha)*(t*(gam - alpha*gam))**(beta/(1 - alpha)))/(-1 + 3*alpha - beta)
-    else:
-         out = np.ones(len(t))*np.nan
-    return out
-    #return ((d/gam)*((1-alpha)*gam*t)**((1-alpha+beta)/(1-alpha)))/(1-3*alpha+beta)
-
-def cov_tsa_sn_mult(t1,t2,gamma,d,alpha,beta):
-    tmin = np.minimum(t1,t2)
-    tmax = np.maximum(t1,t2)
-    return var_tsa_sn_mult(tmin,gamma,d,alpha,beta)*((tmin/tmax)**(alpha/(alpha-1)))
-    #return (d*(t1*t2)**(-(alpha/(-1 + alpha)))*(-1 + alpha)*(gamma - alpha*gamma)**(beta/(1 - alpha))*np.minimum(t1, t2)**((1 - 3*alpha + beta)/(1 - alpha)))/(-1 + 3*alpha - beta)
-
-###############################################################################
-t = np.linspace(0,3,300)
-t1=t
-t2=t
-tm1, tm2 = np.meshgrid(t1, t2)
-
-gam = 1.0
-d = 0.2
-beta=0.5
-#mean########
-alpha = -1.0
-mean_b_zero=mean_tsa_sn_mult(t,gam,d,alpha,beta)
-var_b_zero=var_tsa_sn_mult(t,gam,d,alpha,beta)
-cov_b_zero=cov_tsa_sn_mult(tm1,tm2,gam,d,alpha,beta)
-
-alpha = -0.5
-mean_b_one=mean_tsa_sn_mult(t,gam,d,alpha,beta)
-var_b_one=var_tsa_sn_mult(t,gam,d,alpha,beta)
-cov_b_one=cov_tsa_sn_mult(tm1,tm2,gam,d,alpha,beta)
-
-alpha = 0.0
-mean_b_Mone=mean_tsa_sn_mult(t,gam,d,alpha,beta)
-var_b_Mone=var_tsa_sn_mult(t,gam,d,alpha,beta)
-cov_b_Mone=cov_tsa_sn_mult(tm1,tm2,gam,d,alpha,beta)
 ###############################################################################
 
 
+## need to set parameters in this class
 class PureFwdPowerlaw(object):
 
     def __init__(self,fit_until_this_t=300,nrealiz=5,gamma=1.0,D=0.2,alpha=-1.0,beta=0.0):
@@ -94,10 +35,10 @@ class PureFwdPowerlaw(object):
         self.total_time=2000#80#max(40,fit_until_this_t)
         self.x0_for_reverse = 0
         #self.D = 0.2
-        self.dt = 0.005#0.00005#0.005#0.05##0.5#0.05#0.0005
+        self.dt = 0.005
         self.dt_eff = self.dt*self.traFreq
         self.seed = 12345
-        self.x_start_sim = 20#3#20#1#2#3#7#5#2#10#2#1#0.5#1#2  
+        self.x_start_sim = 20
 
 
     def run(self):

@@ -18,23 +18,23 @@ typedef struct {
 	double	 beta;
 	double   gamma;
 
-        int      nrealiz;        
-        int      seed;
-        double   dt;
-        double   x_start_sim;
+	int      nrealiz;        
+	int      seed;
+	double   dt;
+	double   x_start_sim;
 	double   var_start_sim;
 	double   x_start_mean;
-        double   x0_for_reverse;
+	double   x0_for_reverse;
 	double   x_upper_bound;
-        int      total_time;
+	int      total_time;
 	int      max_rtime; 
 
-        int      wfreq;
-        int      traFreq;
+	int      wfreq;
+	int      traFreq;
 	int      N;
-                 
-        double*  x;
-        int      t_hit_max;
+					
+	double*  x;
+	int      t_hit_max;
 	         
 	double*  xmean;
 	double*  x2mean;

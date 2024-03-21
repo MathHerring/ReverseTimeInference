@@ -9,5 +9,18 @@ Contents of this repository:
 - code to generate an ensemble of SDEs with power law force
 - code to generate the cytokinesis ensemble
 
+
+## Getting started
+
+prerequisites:
+- numpy
+- scipy
+- matplotlib
+- dynesty
+
+optional:
+- seaborn
+
+
 ## Acknowledgements
 For inference we used dynesty: https://github.com/joshspeagle/dynesty

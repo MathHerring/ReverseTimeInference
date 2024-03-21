@@ -147,12 +147,12 @@ if(bool_init):
 
     nrealiz = 10000
     
-    names = ['drift','neg_two']#['drift','bessel','neg_two']#['bessel']#
+    names = ['drift','neg_two']#['drift','bessel','neg_two']
     #kp1,kd1,kp,kd,alpha
     p0 = [400,10,2000,20,1]
     p1 = [0.5,0.01,0,0,1]
     p2 = [0.7,0.1,0,0,2]
-    all_params = [p0,p2] #[p0,p1,p2] #[p1]
+    all_params = [p0,p2] #[p0,p1,p2]
 
     ##########################################################################    
     # Instantiate Classes###################################################  

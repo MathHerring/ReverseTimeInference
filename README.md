@@ -32,6 +32,7 @@ To generate trajectories execute the already compiled c code via python script. 
 ## Contributors
 
 Matthias Häring - Göttingen Campus Institute for Dynamics of Biological Networks
+
 Nicolas Lenner - Institute for Advanced Study Princeton
 
 ## Acknowledgements

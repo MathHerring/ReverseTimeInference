@@ -1,7 +1,5 @@
 # ReverseTimeInference
-This repository demonstrates inference in target state aligned ensembles for the example of cytokinetic ring constriction. Please cite our publication:
-
-"Reverse Time Analysis of Target-State Directed Processes in Living Systems" - https://arxiv.org/abs/2304.03226
+This repository contains code for the paper "The Landscape of Terminating Processes in Living Systems" by Nicolas Lenner, Matthias Häring, Stephan Eule, Jörg Großhans, and Fred Wolf. It demonstrates reverse-time inference using target state aligned ensembles for the example of cytokinetic ring constriction. 
 
 
 ## Getting started
